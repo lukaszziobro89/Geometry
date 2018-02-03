@@ -8,8 +8,8 @@ import java.util.InputMismatchException;
 public class Rectangle extends Plane implements GeometricObjectMethods, Serializable {
 
 /**----- Properties/fields -----*/
-    private double side1 = 1;
-    private double side2 = 1;
+    private double side1;
+    private double side2;
 
 /**----- Constructors -----*/
     public Rectangle(){
