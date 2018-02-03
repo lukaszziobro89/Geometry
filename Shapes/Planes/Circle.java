@@ -7,17 +7,17 @@ import java.util.InputMismatchException;
 
 public class Circle extends Plane implements GeometricObjectMethods, Serializable{
 /**----- Properties/fields -----*/
-    private double radius = 1;
+    private double radius;
 
 /**----- Constructors -----*/
     public Circle(){
-        this.area = (Math.PI * this.radius * this.radius);
         setRadius(1);
+        this.area = (Math.PI * radius * radius);
     }
 
     public Circle(double radius){
-        this.area = (Math.PI * this.radius * this.radius);
         setRadius(radius);
+        this.area = (Math.PI * radius * radius);
     }
 
     public Circle(double radius, String name, String color, boolean isFilled) {
