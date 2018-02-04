@@ -138,8 +138,10 @@
       <point x="0.0" y="45.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.6860517435320583" x="1092.0" y="683.3676012461061" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.6860517435320583" x="1092.0" y="926.4218724381046" />
+  <SelectedNodes>
+    <node>Serialization.LoadGeometricObjects</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>
