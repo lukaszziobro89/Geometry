@@ -36,10 +36,10 @@ public class Cone extends Solid implements GeometricObjectMethods, Serializable{
     public int compareTo(GeometricObject geometricObject) {
         int compareValue=0;
         if (geometricObject instanceof Cone){
-            Cone circle = (Cone) geometricObject;
-            if (this.getArea() < circle.getArea()){
+            Cone cone = (Cone) geometricObject;
+            if (this.getArea() < cone.getArea()){
                 compareValue = -1;
-            } else if(this.getArea() > circle.getArea()){
+            } else if(this.getArea() > cone.getArea()){
                 compareValue = 1;
             } else {
                 compareValue = 0;
@@ -58,6 +58,10 @@ public class Cone extends Solid implements GeometricObjectMethods, Serializable{
                 "\r\n- is filled: " + this.isFilled +
                 "\r\n- area: " + this.getArea() +
                 "\r\n- radius: " + this.getBaseRadius() +
+                "\r\n- height: " + this.getHeight() +
+                "\r\n- side area: " + this.calculateSideArea() +
+                "\r\n- cone generatrix: " + this.calculateConeGeneratrix() +
+                "\r\n- volume: " + this.calculateVolume() +
                 "\r\n- height: " + this.getHeight());
     }
 
@@ -107,7 +111,7 @@ public class Cone extends Solid implements GeometricObjectMethods, Serializable{
     }
 
     private void setHeight(double height)throws InputMismatchException {
-        if (!isValidBaseRadius(height)) {
+        if (!isValidHeight(height)) {
             throw new InputMismatchException("Height must be greater then zero.");
         }
         this.height = height;
